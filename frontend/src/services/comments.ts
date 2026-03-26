@@ -19,7 +19,6 @@ export const commentsService = {
   getByPost: (postId: string) =>
     http.get<ApiComment[]>(`/posts/${postId}/comments`).then(r => r.data),
 
-  // Note : le backend valide "body" dans le body de la requête
   create: (postId: string, body: string) =>
     http.post<ApiComment>(`/posts/${postId}/comments`, { body }).then(r => r.data),
 

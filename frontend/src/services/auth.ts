@@ -1,10 +1,14 @@
 import http from '@/lib/http'
+import { Role } from '@/types'
 
 // ── Types correspondant aux réponses réelles de l'API ─────────────────────
 export interface ApiUser {
   id: string
   username: string
   email: string
+  role: Role
+  bio?: string
+  avatar?: string
   created_at: string
   updated_at: string
 }

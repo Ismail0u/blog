@@ -56,11 +56,13 @@ export function RegisterForm() {
       // 2. Connexion automatique
       const { user: apiUser, token } = await authService.login(form.email, form.password)
 
-      const user: User = {
+         const user: User = {
         id:        apiUser.id,
         username:  apiUser.username,
         email:     apiUser.email,
-        role:      'author',
+        role:      apiUser.role,
+        bio:       apiUser.bio,
+        avatar:    apiUser.avatar,
         createdAt: apiUser.created_at,
       }
 

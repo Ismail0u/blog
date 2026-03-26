@@ -26,15 +26,16 @@ export function LoginForm() {
 
     try {
       const { user: apiUser, token } = await authService.login(email, password)
-
-      // Adapte le User API vers le type User du frontend
-      const user: User = {
+ const user: User = {
         id:        apiUser.id,
         username:  apiUser.username,
         email:     apiUser.email,
-        role:      'author',  // à remplacer quand le backend exposera le rôle
+        role:      apiUser.role,
+        bio:       apiUser.bio,
+        avatar:    apiUser.avatar,
         createdAt: apiUser.created_at,
       }
+
 
       login(user, token)
       navigate('/')

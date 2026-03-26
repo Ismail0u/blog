@@ -194,7 +194,7 @@ export function Editor({
     <div className={cn('border border-gray-200 rounded-xl overflow-hidden bg-white', className)}>
 
       {/* ── Barre d'outils ──────────────────────────────────────── */}
-      <div className="flex items-center gap-0.5 px-2 py-1.5 border-b border-gray-200 bg-gray-50 flex-wrap min-h-[42px]">
+      <div className="flex items-center gap-0.5 px-2 py-1.5 border-b border-gray-200 bg-gray-50 flex-wrap min-h-10.5">
 
         {/* Tabs Écrire / Aperçu */}
         <div className="flex items-center mr-2 border border-gray-200 rounded-lg overflow-hidden bg-white shrink-0">
@@ -268,7 +268,7 @@ export function Editor({
           style={{ minHeight: `${minRows * 1.75}rem` }}
         />
       ) : (
-        <div className="min-h-[400px] px-5 py-4 bg-white">
+        <div className="min-h-100 px-5 py-4 bg-white">
           {value.trim() ? (
             <div
               className="prose prose-gray max-w-none text-sm"

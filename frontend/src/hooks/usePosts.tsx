@@ -36,7 +36,6 @@ export function adaptApiPost(p: ApiPost): Post {
     excerpt: excerpt(p.content),
     content: p.content,
     author,
-    // Catégorie à implémenter côté backend — valeur par défaut pour l'instant
     category: MOCK_CATEGORIES[0],
     readingTime: readingTime(p.content),
     publishedAt: p.created_at,
